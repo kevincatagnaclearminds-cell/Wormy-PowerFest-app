@@ -116,11 +116,7 @@ function ScanLogItem({ scan, index, totalScans, isValid, modeInfo }: ScanLogItem
           <View style={styles.logItemHeader}>
             <View style={styles.leftSection}>
               <View style={styles.iconContainerValid}>
-                {modeInfo.iconLib === 'Ionicons' ? (
-                  <Ionicons name={modeInfo.icon} size={24} color={COLORS.success.main} />
-                ) : (
-                  <MaterialCommunityIcons name={modeInfo.icon} size={24} color={COLORS.success.main} />
-                )}
+                <Ionicons name="checkmark" size={32} color={COLORS.neutral.white} />
               </View>
               <View style={styles.headerTextContainer}>
                 <Text style={styles.modeLabel}>{modeInfo.label}</Text>

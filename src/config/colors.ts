@@ -8,19 +8,19 @@ export const COLORS = {
     lighter: '#E0AAFF',
   },
   
-  // Cyan/Turquesa
+  // Dorado/Amarillo vibrante
   secondary: {
-    dark: '#00B4D8',
-    main: '#00D9FF',
-    light: '#7DF9FF',
-    lighter: '#CAF0F8',
+    dark: '#F59E0B',
+    main: '#FCD34D',
+    light: '#FDE68A',
+    lighter: '#FEF3C7',
   },
   
   // Estados
   success: {
-    main: '#00D9FF',
-    light: '#E8F9FD',
-    border: '#7DF9FF',
+    main: '#10B981',
+    light: '#D1FAE5',
+    border: '#6EE7B7',
   },
   
   error: {
@@ -67,7 +67,7 @@ export const COLORS = {
   // Sombras
   shadow: {
     primary: '#9D4EDD',
-    secondary: '#00D9FF',
+    secondary: '#F59E0B',
     dark: '#000000',
   },
 };

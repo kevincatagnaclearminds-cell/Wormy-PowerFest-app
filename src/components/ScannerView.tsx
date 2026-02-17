@@ -6,6 +6,7 @@ import { Mode, ScanResult } from '../types';
 import { ResultBanner } from './ResultBanner';
 import { QRScanner } from './QRScanner';
 import { CustomAlert } from './CustomAlert';
+import { AnimatedBackground } from './AnimatedBackground';
 import { validateQR, registrarEntrada, registrarEntrega } from '../services/scanService';
 import { COLORS } from '../config/colors';
 
@@ -125,13 +126,35 @@ export function ScannerView({ mode, scans, onScan }: ScannerViewProps) {
       // 2. Mostrar información del participante y confirmar
       const participant = validation.data!;
       
-      const statusInfo = `Estado Entrada: ${participant.status.entrada ? '✅' : '❌'}\nEstado Entrega: ${participant.status.entrega ? '✅' : '❌'}`;
+      // Verificar si ya está registrado según el modo
+      let alertTitle = 'Participante Encontrado';
+      let alertMessage = '';
+      let alertType: 'confirm' | 'info' = 'confirm';
+      
+      if (!participant.can_scan) {
+        // Ya está registrado
+        if (mode === 'entrada' && participant.status.entrada) {
+          alertTitle = 'Entrada Ya Registrada';
+          alertMessage = `${participant.name}\n\nEsta persona ya registró su entrada al evento anteriormente.`;
+          alertType = 'info';
+        } else if (mode === 'entrega' && participant.status.entrega) {
+          alertTitle = 'Pasaporte Ya Entregado';
+          alertMessage = `${participant.name}\n\nEsta persona ya recibió su pasaporte anteriormente.`;
+          alertType = 'info';
+        } else {
+          alertMessage = `${participant.name}\n${participant.email}\n\n${participant.message}`;
+        }
+      } else {
+        // Puede escanear
+        const actionText = mode === 'entrada' ? 'registrar la entrada' : 'registrar la entrega del pasaporte';
+        alertMessage = `${participant.name}\n${participant.email}\n\n¿Deseas ${actionText}?`;
+      }
       
       setAlertConfig({
         visible: true,
-        type: 'confirm',
-        title: 'Participante Encontrado',
-        message: `${participant.name}\n${participant.email}\n\n${statusInfo}\n\n${participant.message}`,
+        type: alertType,
+        title: alertTitle,
+        message: alertMessage,
         confirmText: participant.can_scan ? 'Registrar' : 'Aceptar',
         onConfirm: async () => {
           setAlertConfig({ ...alertConfig, visible: false });
@@ -243,6 +266,8 @@ export function ScannerView({ mode, scans, onScan }: ScannerViewProps) {
 
   return (
     <View style={styles.container}>
+      <AnimatedBackground />
+      
       {/* View Header */}
       <View style={styles.header}>
         <Text style={styles.headerSubtitle}>MODO ACTIVO</Text>

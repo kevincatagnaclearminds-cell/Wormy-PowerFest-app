@@ -86,7 +86,7 @@ export function QRScanner({ onScan, onClose }: QRScannerProps) {
             {scanned && (
               <View style={styles.scannedOverlay}>
                 <LinearGradient
-                  colors={['#5FFBF1', '#5FFBF1']}
+                  colors={['#FCD34D', '#F59E0B']}
                   style={styles.scannedIcon}>
                   <Ionicons name="checkmark" size={50} color="#800080" />
                 </LinearGradient>
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
   cancelButton: {
     width: '100%',
     paddingVertical: 18,
-    backgroundColor: '#5FFBF1',
+    backgroundColor: '#FCD34D',
     borderRadius: 16,
     alignItems: 'center',
   },
@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 48,
     height: 48,
-    borderColor: '#5FFBF1',
+    borderColor: '#FCD34D',
   },
   cornerTopLeft: {
     top: 0,
@@ -291,7 +291,7 @@ const styles = StyleSheet.create({
   instructionTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#5FFBF1',
+    color: '#FCD34D',
     marginBottom: 8,
   },
   instructionText: {
@@ -299,7 +299,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
   closeButton: {
-    backgroundColor: '#5FFBF1',
+    backgroundColor: '#FCD34D',
     paddingHorizontal: 48,
     paddingVertical: 16,
     borderRadius: 16,

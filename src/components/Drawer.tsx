@@ -222,7 +222,7 @@ export function Drawer({
                             </Text>
                           </View>
                         </View>
-                        <Ionicons name="chevron-forward" size={24} color="#5FFBF1" />
+                        <Ionicons name="chevron-forward" size={24} color="#FCD34D" />
                       </View>
                     )}
                   </TouchableOpacity>
@@ -263,7 +263,7 @@ export function Drawer({
                       <Text style={styles.description}>Ver todos los escaneos</Text>
                     </View>
                   </View>
-                  <Ionicons name="chevron-forward" size={24} color="#5FFBF1" />
+                  <Ionicons name="chevron-forward" size={24} color="#FCD34D" />
                 </View>
               </TouchableOpacity>
             </Animated.View>
@@ -331,7 +331,7 @@ const styles = StyleSheet.create({
     padding: 24,
     backgroundColor: '#F8F8F8',
     borderTopWidth: 1,
-    borderTopColor: '#5FFBF1',
+    borderTopColor: '#FCD34D',
   },
   statusRow: {
     flexDirection: 'row',
@@ -342,7 +342,7 @@ const styles = StyleSheet.create({
     width: 10,
     height: 10,
     borderRadius: 5,
-    backgroundColor: '#5FFBF1',
+    backgroundColor: '#FCD34D',
     marginRight: 8,
   },
   statusText: {
@@ -359,7 +359,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#5FFBF1',
+    borderBottomColor: '#FCD34D',
   },
   menuSubtitle: {
     fontSize: 12,
@@ -404,7 +404,7 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#FFFFFF',
     borderWidth: 2,
-    borderColor: '#5FFBF1',
+    borderColor: '#FCD34D',
     borderRadius: 16,
   },
   menuItemLeft: {
@@ -425,7 +425,7 @@ const styles = StyleSheet.create({
     width: 56,
     height: 56,
     borderRadius: 14,
-    backgroundColor: '#5FFBF1',
+    backgroundColor: '#FCD34D',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 16,

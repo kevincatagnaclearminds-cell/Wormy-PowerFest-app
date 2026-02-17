@@ -4,6 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { ScanResult, Mode } from '../types';
 import { ScanLog } from './ScanLog';
+import { AnimatedBackground } from './AnimatedBackground';
 
 interface HistoryViewProps {
   scans: ScanResult[];
@@ -32,6 +33,8 @@ export function HistoryView({ scans }: HistoryViewProps) {
 
   return (
     <View style={styles.container}>
+      <AnimatedBackground />
+      
       {/* Header con estadísticas */}
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Historial de Escaneos</Text>
@@ -114,7 +117,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     backgroundColor: '#FFFFFF',
     borderBottomWidth: 2,
-    borderBottomColor: '#5FFBF1',
+    borderBottomColor: '#FCD34D',
   },
   headerTitle: {
     fontSize: 18,
@@ -151,9 +154,9 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   statCardValid: {
-    backgroundColor: '#E5FFFE',
+    backgroundColor: '#FEF3C7',
     borderWidth: 2,
-    borderColor: '#5FFBF1',
+    borderColor: '#FCD34D',
   },
   statCardInvalid: {
     backgroundColor: '#FFE5F3',

@@ -79,9 +79,9 @@ export function ResultBanner({ result }: ResultBannerProps) {
               { transform: [{ scale: pulseAnim }] }
             ]}>
             <Ionicons 
-              name={isValid ? "checkmark-circle" : "close-circle"} 
-              size={32} 
-              color={isValid ? COLORS.success.main : COLORS.error.main} 
+              name={isValid ? "checkmark" : "close-circle"} 
+              size={40} 
+              color={isValid ? COLORS.neutral.white : COLORS.error.main} 
             />
           </Animated.View>
           <View style={styles.textContainer}>
