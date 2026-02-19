@@ -3,11 +3,9 @@
     "strict": true,
     "target": "esnext",
     "module": "commonjs",
-    "lib": [
-      "esnext"
-    ],
+    "lib": ["esnext"],
     "jsx": "react-native",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
