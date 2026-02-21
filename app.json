@@ -35,7 +35,12 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-barcode-scanner"
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Esta aplicación necesita acceso a la cámara para escanear códigos QR."
+        }
+      ]
     ],
     "extra": {
       "eas": {
