@@ -1,6 +1,6 @@
 // Configuración de la API
 export const API_CONFIG = {
-  BASE_URL: process.env.EXPO_PUBLIC_API_URL || 'http://192.168.100.14:3003/api/scan',
+  BASE_URL: process.env.EXPO_PUBLIC_API_URL || 'http://192.168.1.80:3003/api/scan',
   TIMEOUT: 10000, // 10 segundos
   DEVICE_ID: 'mobile-app-001',
 };
