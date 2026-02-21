@@ -1,6 +1,6 @@
 import { API_CONFIG } from '../config/api';
 
-const API_URL = API_CONFIG.BASE_URL;
+const API_URL = `${API_CONFIG.BASE_URL}/api/scan`;
 
 export interface ValidationResponse {
   success: boolean;
